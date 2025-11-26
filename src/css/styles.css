@@ -543,6 +543,7 @@ h1, h2, h3, h4 {
    6. Cookie Pop-up (Этап 5 - Стили) - Адаптировано под ТЕМУ
    ========================================================================== */
 .cookie-popup {
+ 
     position: fixed;
     bottom: 0;
     left: 0;
@@ -558,6 +559,7 @@ h1, h2, h3, h4 {
     transition: transform 0.4s ease-out;
     transform: translateY(0);
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .cookie-popup.is-hidden {
@@ -566,7 +568,7 @@ h1, h2, h3, h4 {
 
 .cookie-popup__text {
     font-size: 0.9rem;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
