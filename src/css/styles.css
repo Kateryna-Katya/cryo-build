@@ -141,6 +141,7 @@ h1, h2, h3, h4 {
     background-color: var(--color-secondary);
     box-shadow: 0 4px 20px rgba(255, 152, 0, 0.5);
     transform: translateY(-2px);
+    color:var(--color-neutral)
 }
 
 .button--secondary {
@@ -308,6 +309,8 @@ h1, h2, h3, h4 {
     background-color: var(--color-secondary);
     color: var(--color-white);
     text-align: center;
+    border-radius: 10px;
+    padding: 6px;
 }
 
 .header__nav.is-open {
@@ -580,6 +583,9 @@ h1, h2, h3, h4 {
     background-color: var(--color-primary);
     color: var(--color-white);
     box-shadow: none;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
 }
 
 .cookie-popup__button:hover {
@@ -1175,4 +1181,169 @@ h1, h2, h3, h4 {
 .testimonial-slider__dot.is-active {
     background-color: var(--color-primary);
     border-color: var(--color-secondary);
+}
+/* ==========================================================================
+   13. Стили для Секции Контактов (Contact) (Этап 4)
+   ========================================================================== */
+   .contact {
+    padding: var(--space-xl) 0;
+    text-align: center;
+    background-color: var(--color-background); /* Самый темный фон */
+}
+
+.contact__heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+}
+
+.contact__subtext {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: var(--space-md);
+    background-color: var(--color-neutral); /* Чуть светлее темный фон для формы */
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 188, 212, 0.1);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-background); /* Самый темный фон для полей */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3);
+}
+
+/* CAPTCHA Styles */
+.captcha-group {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-sm);
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-background);
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.captcha-box__display {
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-secondary);
+    padding: 0 0.5rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+.captcha-box input {
+    flex-grow: 1;
+    color: var(--color-text);
+    background-color: var(--color-neutral);
+    border: 1px solid var(--color-neutral);
+}
+
+.captcha-message {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    height: 1.2rem;
+}
+
+/* Стили для Чекбокса Конфиденциальности */
+.form-group--checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group--checkbox input[type="checkbox"] {
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    border: 1px solid var(--color-text);
+    background-color: var(--color-background);
+    appearance: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-group--checkbox input[type="checkbox"]:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.form-group--checkbox input[type="checkbox"]:checked::after {
+    content: '\2713';
+    font-size: 14px;
+    color: var(--color-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.checkbox-label a {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Submission Message */
+.submission-message {
+    margin-top: var(--space-md);
+    padding: var(--space-sm);
+    background-color: rgba(0, 188, 212, 0.2);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    font-weight: 600;
 }
